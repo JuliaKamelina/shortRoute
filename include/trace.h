@@ -7,6 +7,6 @@ struct point {
   int x, y;
 };
 
-int searchTrace(int A[][5], int, int);
+int searchTrace(int **A, int, int);
 
 #endif  //  _TRACE_H_
