@@ -1,7 +1,7 @@
 #include "trace.h"
 #include <queue>
 
-int searchTrace(int A[][5], int m, int n) {
+int searchTrace(int **A, int m, int n) {
   int **R = new int * [m];
   for (int i = 0; i < m; i++)
     R[i] = new int[n];
@@ -12,6 +12,7 @@ int searchTrace(int A[][5], int m, int n) {
   finish.x = m - 1; finish.y = 0;
   q.push(start);
   R[start.x][start.y] = 0;
+  
     while(!q.empty()) {
       point first = q.front();
       if (first.x == finish.x && first.y == finish.y) {
